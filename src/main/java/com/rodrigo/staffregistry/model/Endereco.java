@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Embeddable
-public class Endereço {
+public class Endereco {
 
     private String CEP;
     private String longradouro;

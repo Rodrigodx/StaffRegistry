@@ -1,38 +1,31 @@
-package com.rodrigo.staffregistry.model;
+package com.rodrigo.staffregistry.dto;
 
 import com.rodrigo.staffregistry.enums.PessoaEnum;
-import jakarta.persistence.*;
+import com.rodrigo.staffregistry.model.Endereco;
+import com.rodrigo.staffregistry.model.Endereço;
 import lombok.Data;
 
 import java.time.LocalDate;
 
-@Entity
 @Data
-public class Cadastro {
+public class CadastroResponseDTO{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(length = 60, nullable = false)
     private String nome;
 
     private String CPF;
 
-    @Enumerated(EnumType.STRING)
     private PessoaEnum pessoaEnum;
 
     private String email;
 
-    @Column(columnDefinition = "DATE")
     private LocalDate dataNascimento;
 
     private String telefone;
 
-    private boolean whatsApp = false;
+    private boolean whatsApp;
 
-    @Embedded
     private Endereco endereco;
-
 
 }
