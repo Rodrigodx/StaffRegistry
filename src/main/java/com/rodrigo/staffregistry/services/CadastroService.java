@@ -26,11 +26,35 @@ public class CadastroService {
        return cadastros.stream().map(cadastro -> modelMapper.map(cadastro, CadastroResponseDTO.class)).collect(Collectors.toList());
     }
 
+    @ReadOnlyProperty
+    public CadastroResponseDTO findById(Integer id){
+        Cadastro cadastro = cadastroRepository.findById(id).get();
+        CadastroResponseDTO cadastroResponseDTO = modelMapper.map(cadastro, CadastroResponseDTO.class);
+        return cadastroResponseDTO;
+    }
+
     @Transactional
     public CadastroResponseDTO save(CadastroRequestDTO cadastro){
         Cadastro cadastro1 = modelMapper.map(cadastro, Cadastro.class);
         cadastroRepository.save(cadastro1);
         return modelMapper.map(cadastro1, CadastroResponseDTO.class);
+    }
+
+    @Transactional
+    public CadastroResponseDTO update(CadastroRequestDTO cadastroRequestDTO, Integer id){
+        Cadastro cadastro = modelMapper.map(cadastroRequestDTO, Cadastro.class);
+        if(cadastroRepository.existsById(id)){
+            cadastro.setId(id);
+            cadastroRepository.save(cadastro);
+        }
+        return modelMapper.map(cadastro, CadastroResponseDTO.class);
+    }
+
+    @Transactional
+    public void delete (Integer id){
+        if(cadastroRepository.existsById(id)){
+            cadastroRepository.deleteById(id);
+        }
     }
 
 }

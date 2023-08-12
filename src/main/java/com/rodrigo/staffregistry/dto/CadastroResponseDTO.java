@@ -2,7 +2,6 @@ package com.rodrigo.staffregistry.dto;
 
 import com.rodrigo.staffregistry.enums.PessoaEnum;
 import com.rodrigo.staffregistry.model.Endereco;
-import com.rodrigo.staffregistry.model.Endereço;
 import lombok.Data;
 
 import java.time.LocalDate;
