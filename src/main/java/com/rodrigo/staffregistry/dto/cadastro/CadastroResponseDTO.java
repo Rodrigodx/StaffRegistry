@@ -1,4 +1,4 @@
-package com.rodrigo.staffregistry.dto;
+package com.rodrigo.staffregistry.dto.cadastro;
 
 import com.rodrigo.staffregistry.enums.PessoaEnum;
 import com.rodrigo.staffregistry.model.Endereco;
