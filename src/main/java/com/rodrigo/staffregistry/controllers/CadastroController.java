@@ -1,7 +1,7 @@
 package com.rodrigo.staffregistry.controllers;
 
-import com.rodrigo.staffregistry.dto.CadastroRequestDTO;
-import com.rodrigo.staffregistry.dto.CadastroResponseDTO;
+import com.rodrigo.staffregistry.dto.cadastro.CadastroRequestDTO;
+import com.rodrigo.staffregistry.dto.cadastro.CadastroResponseDTO;
 import com.rodrigo.staffregistry.services.CadastroService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;

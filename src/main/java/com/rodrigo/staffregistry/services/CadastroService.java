@@ -1,7 +1,7 @@
 package com.rodrigo.staffregistry.services;
 
-import com.rodrigo.staffregistry.dto.CadastroRequestDTO;
-import com.rodrigo.staffregistry.dto.CadastroResponseDTO;
+import com.rodrigo.staffregistry.dto.cadastro.CadastroRequestDTO;
+import com.rodrigo.staffregistry.dto.cadastro.CadastroResponseDTO;
 import com.rodrigo.staffregistry.model.Cadastro;
 import com.rodrigo.staffregistry.repositories.CadastroRepository;
 import jakarta.transaction.Transactional;
